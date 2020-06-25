@@ -1,0 +1,201 @@
+/* 공통 */
+
+.hide{
+  display: none!important;
+}
+.buttons{
+  position: absolute;
+  display: inline-block;
+  right: 0.5em;
+}
+button{
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.1em 0.4em;
+  vertical-align: middle;
+}
+
+
+/* wrapper */
+
+.wrapper{
+  position:absolute;
+  width:100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+
+/* header */
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  z-index: 5;
+}
+#greeting{
+  background-color: rgba(56, 109, 245, 0.9);
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.2rem;
+  vertical-align: middle;
+}
+#greeting input{
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.3rem;
+  width: 12rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+#greeting p{
+  display: inline-block;
+}
+#navigation{
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 7px;
+  height: 40%;
+  border-radius: 5px;
+  right: 5vw;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+/* footer */
+
+footer{
+  position: relative;
+  background-color: rgba(56, 109, 245, 0.9);
+  height: 10vh;
+  witdth:100vw;
+  font-size: 1rem;
+  scroll-snap-align: end;
+}
+footer>a{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* main */
+main{
+  scroll-behavior: smooth;
+}
+
+
+/* page */
+
+.page{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+
+/* page one 상세 */
+
+.one{
+  background-image: url(../img/page1.jpg);
+}
+.center{
+  position: fixed;
+  width: 25rem;
+  top: calc(35vh);
+  left: calc(50vw);
+  transform: translate(-50%, -25%);
+  border-radius: 1rem;
+  z-index: 10;
+}
+.clock{
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.8);
+  /* color : rgb(132, 70, 246); */
+  font-size:  4.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+#todo_add{
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  vertical-align: middle;
+}
+form{
+  text-align: center;
+}
+.context input[type=text]{
+  vertical-align: middle;
+  width: 80%;
+  font-size: 0.8em;
+  border-radius: 0.2em;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.context input[type=submit]{
+  vertical-align: middle;
+  right: 0em;
+  padding: 0.1em;
+  opacity: 0.8;
+  font-size: 0.5em;
+  border-radius:0.25em;
+}
+.context{
+  position: relative;
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-weight: 1000;
+  color: rgba(220, 220, 220, 0.65);
+  /* color: rgb(38, 76, 175); */
+}
+.context ul{
+  margin-top: 1em;
+  max-height: 70vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
+.context ul li{
+  position: relative;
+  margin-top: 0.2em;
+  background-color:rgba(255, 255, 255, 0.10);
+  font-size: 0.8em;
+  font-weight: 400;
+  color: black;
+}
+.delete{
+  position: absolute;
+  right: 0;
+  font-size: 0.6rem;
+  opacity: 0.7;
+}
+
+
+/* page two */
+.two{
+  background-image: url(../img/cityscape-1082277.jpg);
+
+}
+
+
+/* page three */
+.three{
+  background-image: url(../img/home-office-4980353.jpg);
+}

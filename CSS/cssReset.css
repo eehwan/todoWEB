@@ -8,6 +8,7 @@ address,em{font-style:normal}
 a{text-decoration:none}
 a:hover{text-decoration:underline}
 iframe{overflow:hidden;margin:0;padding:0;border:0}
+input,p{display: inline-block;}
 
 html{
   -webkit-text-size-adjust:none;
@@ -21,9 +22,9 @@ html{
   scrollbar-width: none;
 }
 /* Chrome, Safari, Opera*/
-/* .wrapper::-webkit-scrollbar {
+.wrapper::-webkit-scrollbar {
   display: none;
-} */
+}
 ul::-webkit-scrollbar {
   display: none;
 }

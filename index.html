@@ -4,61 +4,59 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>eehwan.shin</title>
+    <title>Todo List (by eehwan)</title>
     <link href="CSS/cssReset.css" rel="stylesheet" type="text/css" />
     <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/fontello-embedded.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/animation.css" rel="stylesheet" type="text/css" />
     <!--  favicon -->
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!--   -->
   </head>
 
   <body>
     <div class="wrapper">
-      <header>
+      <header class="off">
         <span id="greeting">
-          <input type="text" placeholder="Your name">
-          <p> Set your Todo List </p>
+          <form action="" id="form_user">
+            <input type="text" placeholder="Set Your name">
+          </form>
         </span>
-        <div class="buttons">
-          <button id="show"> Show / Hide </button>
-        </div>
-        <div id="navigation">
-          navi
-        </div>
+        <abbr title="settings">
+          <i class="icon-cog-1 animate-spin"></i>
+        </abbr>
+        <ul class="checklists hide">
+          <li id="show_todo"> Show/Hide </li>
+        </ul>
       </header>
+      <navi class="off"> navi </navi>
       <main>
-        <div class="page one">
-          <div class="center">
-            <div class="clock">
-              clock
-            </div>
-            <div class="context">
-              <div class="buttons">
-                <button id="todo_add"> + </button>
-              </div>
-              <p>To do list</p>
-              <form action="" method="post" class="hide">
-                <input type="text" placeholder="Things to Do" value="todo">
-                <input type="submit" value="save">
-              </form>
-              <ul id="todo_list"></ul>
-            </div>
+        <div class="center">
+          <div class="clock">
+            clock
+          </div>
+          <div class="context">
+            <p>To do list</p>
+            <i class="icon-list-add" id="todo_add"></i>
+            <form action="" method="post" class="hide" id="form_todo">
+              <input type="text" placeholder="Things to Do">
+              <input type="submit" value="save">
+            </form>
+            <ul id="todo_list"></ul>
           </div>
         </div>
-        <div class="page two">
-          <p>page two</p>
-        </div>
-        <div class="page three">
-          <p>page three</p>
-        </div>
+        <div class="pages" id="page1"></div>
+        <div class="pages" id="page2"></div>
+        <div class="pages" id="page3"></div>
       </main>
       <footer>
-        <a target="_blank" href="github.com/eehwan">github.com/eehwan</a>
+        <a target="_blank" href="https://github.com/eehwan/todoWEB-feat-Momentum-with-JS"><i class=icon-github-circled-alt2></i>GitHub Link</a>
       </footer>
       <script src="JS/clock.js"></script>
       <script src="JS/onOff.js"></script>
       <script src="JS/toDo.js"></script>
+      <script src="JS/greeting.js"></script>
     </div>
   </body>
 

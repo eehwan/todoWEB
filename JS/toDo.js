@@ -1,17 +1,29 @@
 function select(tag){
   return document.querySelector(tag);
 }
+
+const _form_todo = select("#form_todo"),
+      _input_todo = select("#form_todo input"),
+      _todo_list = select("#todo_list");
+
+
 function  addToDo(text){
-  var list = document.createElement("li");
-  list.innerHTML = (text+"<button class='delete'>X</button>");
-  select("#todo_list").append(list);
+  const list = document.createElement("li");
+  list.innerHTML = `${text} <i class="icon-trash"></i>`;
+  _todo_list.append(list);
 }
+function handleSubmit(event){
+  event.preventDefault();
+  const _inputTodo = _input_todo.value;
+  addToDo(_inputTodo);
+}
+
+
 
 function init(){
-  
+  _form_todo.addEventListener("submit", function() {
+    handleSubmit(event);
+  });
 }
 
-// 실행
-// select("#todo_add").addEventListener("click", function(){
-//   addToDo("할 일 추가");
-// })
+init();

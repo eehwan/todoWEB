@@ -1,20 +1,57 @@
-/* 공통 */
+/* effects */
 
 .hide{
   display: none!important;
 }
-.buttons{
-  position: absolute;
-  display: inline-block;
-  right: 0.5em;
+.off{
+  opacity: 0;
+  transition: opacity 2s 0.3s;
 }
-button{
-  border-radius: 5px;
-  font-size: 1rem;
-  padding: 0.1em 0.4em;
-  vertical-align: middle;
+navi.off{
+  opacity: 0.15;
 }
 
+
+
+/* 버튼 */
+/* .buttons{
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+} */
+abbr{
+  position: fixed;
+  right: 1em;
+  vertical-align: middle;
+}
+.checklists{
+  position: fixed;
+  top: 2em;
+  right: 1em;
+  width: 150px;
+  height: 20vh;
+  padding: 0.1em;
+  background-color: darkgrey;
+  font-size: 0.8em;
+}
+.icon-list-add{
+  border: none;
+
+  position: absolute;
+  right: 0.5em;
+  border-radius: 5px;
+  font-size: 1em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.icon-cog-1{
+  display: inline-block;
+  font-size: 1em;
+  vertical-align: middle;
+  cursor: pointer;
+}
 
 /* wrapper */
 
@@ -39,9 +76,9 @@ header{
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
   z-index: 5;
+  background-color: rgba(56, 109, 245, 0.9);
 }
 #greeting{
-  background-color: rgba(56, 109, 245, 0.9);
   display: inline-block;
   margin: 0.5rem;
   padding: 0.2rem;
@@ -58,16 +95,6 @@ header{
 #greeting p{
   display: inline-block;
 }
-#navigation{
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 7px;
-  height: 40%;
-  border-radius: 5px;
-  right: 5vw;
-  top:50%;
-  transform: translateY(-50%);
-}
 
 /* footer */
 
@@ -76,15 +103,38 @@ footer{
   background-color: rgba(56, 109, 245, 0.9);
   height: 10vh;
   witdth:100vw;
-  font-size: 1rem;
   scroll-snap-align: end;
+}
+footer>a::before{
+  width: 300px;
+  height: 431px;
+
+  background:url('../QR_code.png') no-repeat left top; // 폭과 높이를 지정해야 이미지 나옴
 }
 footer>a{
   position: absolute;
+  font-size: 1.4rem;
+  font-weight: bold;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
 }
+
+navi{
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgb(255,255,255);
+  width: 7px;
+  height: 40%;
+  border-radius: 5px;
+  right: 5vw;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
 
 /* main */
 main{
@@ -94,7 +144,7 @@ main{
 
 /* page */
 
-.page{
+.pages{
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -107,12 +157,8 @@ main{
   background-attachment: fixed;
 }
 
+/* center */
 
-/* page one 상세 */
-
-.one{
-  background-image: url(../img/page1.jpg);
-}
 .center{
   position: fixed;
   width: 25rem;
@@ -133,13 +179,16 @@ main{
   font-weight: bold;
   text-align: center;
 }
-#todo_add{
-  background-color: rgba(255, 255, 255, 0.4);
-  border: none;
-  vertical-align: middle;
-}
 form{
   text-align: center;
+}
+.context{
+  position: relative;
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-weight: 1000;
+  color: rgba(200, 220, 220, 0.9);
+  /* color: rgb(38, 76, 175); */
 }
 .context input[type=text]{
   vertical-align: middle;
@@ -156,14 +205,6 @@ form{
   opacity: 0.8;
   font-size: 0.5em;
   border-radius:0.25em;
-}
-.context{
-  position: relative;
-  margin: 1rem;
-  font-size: 1.5rem;
-  font-weight: 1000;
-  color: rgba(220, 220, 220, 0.65);
-  /* color: rgb(38, 76, 175); */
 }
 .context ul{
   margin-top: 1em;
@@ -187,15 +228,13 @@ form{
   opacity: 0.7;
 }
 
-
-/* page two */
-.two{
-  background-image: url(../img/cityscape-1082277.jpg);
-
+/* pages */
+#page1{
+  background-image: url(../img/page1.jpg);
 }
-
-
-/* page three */
-.three{
-  background-image: url(../img/home-office-4980353.jpg);
+#page2{
+  background-image: url(../img/cityscape-1082277.jpg);
+}
+#page3{
+  background-image: url(../img/spikes-5322390.jpg);
 }

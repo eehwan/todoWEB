@@ -37,10 +37,9 @@
             clock
           </div>
           <div class="context">
-            <p>To do list</p>
-            <i class="icon-list-add" id="todo_add"></i>
+            <p>Things to Do!<i class="icon-list-add" id="todo_add"></i></p>
             <form action="" method="post" class="hide" id="form_todo">
-              <input type="text" placeholder="Things to Do">
+              <input type="text" placeholder="To Do">
               <input type="submit" value="save">
             </form>
             <ul id="todo_list"></ul>
@@ -48,10 +47,14 @@
         </div>
         <div class="pages" id="page1"></div>
         <div class="pages" id="page2"></div>
-        <div class="pages" id="page3"></div>
+        <!-- <div class="pages" id="page3"></div> -->
       </main>
       <footer>
-        <a target="_blank" href="https://github.com/eehwan/todoWEB-feat-Momentum-with-JS"><i class=icon-github-circled-alt2></i>GitHub Link</a>
+        <a href="QR_code.png" id='QR_code' onclick="window.open(this.href, '_blank', 'width=250px,height=250px,toolbars=no,scrollbars=no'); return false;">
+          <img src='QR_code.png' id='QR_code'>
+        </a>
+        <a target="_blank" href="https://github.com/eehwan/todoWEB-feat-Momentum-with-JS" id="GitHub_Link">
+          <i class=icon-github-circled-alt2></i>GitHub Link</a>
       </footer>
       <script src="JS/clock.js"></script>
       <script src="JS/onOff.js"></script>

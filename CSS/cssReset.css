@@ -8,7 +8,10 @@ address,em{font-style:normal}
 a{text-decoration:none}
 a:hover{text-decoration:underline}
 iframe{overflow:hidden;margin:0;padding:0;border:0}
+
 input,p{display: inline-block;}
+input:focus{border:none;}
+
 
 html{
   -webkit-text-size-adjust:none;

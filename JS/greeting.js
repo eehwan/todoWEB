@@ -11,7 +11,7 @@ function greeting(text){
   localStorage.setItem(_user, text);
   _greeting.innerHTML = `Hello, ${text} !`;
 }
-function handleSubmit(event){
+function submit_user(event){
   event.preventDefault();
   const _inputUser = _input_user.value;
   greeting(_inputUser);
@@ -20,7 +20,7 @@ function loadName() {
   const curent_user = localStorage.getItem(_user);
   if(curent_user === null) {
     _form_user.addEventListener("submit", function(){
-      handleSubmit(event);
+      submit_user(event);
     });
   } else {
     greeting(curent_user);

@@ -2,10 +2,10 @@
    Animation example, for spinners
 */
 .animate-spin {
-  -moz-animation: spin 4s infinite linear;
-  -o-animation: spin 4s infinite linear;
-  -webkit-animation: spin 4s infinite linear;
-  animation: spin 4s infinite linear;
+  -moz-animation: spin 6s infinite linear;
+  -o-animation: spin 6s infinite linear;
+  -webkit-animation: spin 6s infinite linear;
+  animation: spin 6s infinite linear;
   display: inline-block;
 }
 @-moz-keyframes spin {

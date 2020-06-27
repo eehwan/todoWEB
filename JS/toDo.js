@@ -9,10 +9,10 @@ const _form_todo = select("#form_todo"),
 
 function  addToDo(text){
   const list = document.createElement("li");
-  list.innerHTML = `${text} <i class="icon-trash"></i>`;
+  list.innerHTML = `<p>${text}</p><i class="icon-trash"></i>`;
   _todo_list.append(list);
 }
-function handleSubmit(event){
+function submit_todo(event){
   event.preventDefault();
   const _inputTodo = _input_todo.value;
   addToDo(_inputTodo);
@@ -22,7 +22,7 @@ function handleSubmit(event){
 
 function init(){
   _form_todo.addEventListener("submit", function() {
-    handleSubmit(event);
+    submit_todo(event);
   });
 }
 

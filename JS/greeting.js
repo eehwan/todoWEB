@@ -2,13 +2,13 @@ function select(tag){
   return document.querySelector(tag);
 }
 
-const _user = "user",
+const _userLS = "user",
       _greeting = select("#greeting"),
       _form_user = select("#form_user"),
       _input_user = select("#form_user input");
 
 function greeting(text){
-  localStorage.setItem(_user, text);
+  localStorage.setItem(_userLS, text);
   _greeting.innerHTML = `Hello, ${text} !`;
 }
 function submit_user(event){
@@ -17,7 +17,7 @@ function submit_user(event){
   greeting(_inputUser);
 }
 function loadName() {
-  const curent_user = localStorage.getItem(_user);
+  const curent_user = localStorage.getItem(_userLS);
   if(curent_user === null) {
     _form_user.addEventListener("submit", function(){
       submit_user(event);

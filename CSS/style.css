@@ -37,9 +37,10 @@ navi.off{
 }
 .icon-list-add{
   position: absolute;
-  right: -0.5em;
+  right: 0em;
+  top: -0.1em;
+  font-size: 1.2em;
   border-radius: 5px;
-  font-size: 1em;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -163,6 +164,10 @@ main{
   font-weight: 1000;
   color: rgba(200, 220, 220, 0.9);
   /* color: rgb(38, 76, 175); */
+
+  max-height: 65vh;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
 }
 #form_todo{
   position: relative;
@@ -189,10 +194,7 @@ main{
 
 .context ul{
   margin-top: 0.5em;
-  max-height: 50vh;
-  overflow-y: scroll;
   scroll-behavior: smooth;
-  overscroll-behavior: contain;
 }
 .context ul li{
   vertical-align: middle;

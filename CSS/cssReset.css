@@ -20,7 +20,7 @@ html{
   box-sizing: border-box !important;
 }
 /* IE and Edge, Firefox */
-.wrapper, .ul{
+.{
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -28,6 +28,6 @@ html{
 .wrapper::-webkit-scrollbar {
   display: none;
 }
-ul::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }

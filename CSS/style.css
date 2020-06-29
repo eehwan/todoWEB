@@ -166,7 +166,7 @@ main{
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(255, 255, 255);
   font-size:  5em;
   font-weight: bold;
   text-align: center;
@@ -176,7 +176,7 @@ main{
   margin:1.5em 1em;
   font-size: 1.5em;
   font-weight: 1000;
-  color: rgba(200, 220, 220, 0.9);
+  color: rgb(200, 220, 220);
 }
 #form_todo{
   position: relative;
@@ -215,6 +215,7 @@ main{
 #todo_list li{
   vertical-align: middle;
   width: 80%;
+  overflow-x: scroll;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 0.8em;
   padding-left: 0.2em;
@@ -236,15 +237,15 @@ main{
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 /* pages */
 #page1{
   background-image: url(../img/page1.jpg);
 }
 #page2{
-  background-image: url(../img/cityscape-1082277.jpg);
+  background-image: url(../img/spikes-5322390.jpg);
 }
 #page3{
-  background-image: url(../img/spikes-5322390.jpg);
+  background-image: url(../img/cityscape-1082277.jpg);
 }

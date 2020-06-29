@@ -129,6 +129,8 @@ footer{
 }
 
 navi{
+  display: none;
+
   position: fixed;
   background-color: rgba(255, 255, 255, 0.5);
   color: rgb(255,255,255);
@@ -175,11 +177,6 @@ main{
   font-size: 1.5em;
   font-weight: 1000;
   color: rgba(200, 220, 220, 0.9);
-  /* color: rgb(38, 76, 175); */
-
-  max-height: 65vh;
-  overflow-y: scroll;
-  overscroll-behavior: contain;
 }
 #form_todo{
   position: relative;
@@ -209,7 +206,10 @@ main{
 }
 
 #todo_list{
+  max-height: 55vh;
   margin-top: 0.5em;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
   scroll-behavior: smooth;
 }
 #todo_list li{
@@ -236,6 +236,7 @@ main{
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  opacity: 0.9;
 }
 /* pages */
 #page1{

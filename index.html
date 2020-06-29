@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Todo List (by eehwan)</title>
+
     <link href="CSS/cssReset.css" rel="stylesheet" type="text/css" />
     <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+    <!-- fontello -->
     <link href="CSS/fontello-embedded.css" rel="stylesheet" type="text/css" />
     <link href="CSS/animation.css" rel="stylesheet" type="text/css" />
     <!--  favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!--   -->
   </head>
 
   <body>
@@ -27,7 +28,8 @@
           <i class="icon-cog-1 animate-spin"></i>
         </abbr>
         <ul class="checklists hide">
-          <li id="show_todo"> Show/Hide </li>
+          <p>Settings</p>
+          <li id="show_todo"> To do - List </li>
         </ul>
       </header>
       <navi class="off"> navi </navi>
@@ -39,7 +41,7 @@
           <div class="context">
             <p>Things to Do!<i class="icon-list-add" id="todo_add"></i></p>
             <form action="" method="post" class="hide" id="form_todo">
-              <input type="text" placeholder="To Do">
+              <input type="text" placeholder=" Write Things to Do">
               <input type="submit" value="save">
             </form>
             <ul id="todo_list"></ul>

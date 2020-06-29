@@ -6,62 +6,68 @@ const _form_todo = select("#form_todo"),
       _input_todo = select("#form_todo input"),
       _todo_list = select("#todo_list");
 
-const _todoLS = "todo";
-const todos = JSON.parse(localStorage.getItem(_todoLS));
+const _toDoLS = "todo";
+let toDos = JSON.parse(localStorage.getItem(_toDoLS));
 
-function make_list(text){
+
+// toDos배열 내부의 object들의 text를 불러와서 make_list함수실행
+function load_todo(){
+  if (toDos !== null || undefined){
+    toDos.forEach(function(element){
+      make_list(element);
+    });
+  };
+}
+
+// toDos배열에 text를 객체로 추가
+function  add_todo(text){
+  const todo_object =  {
+    text: text,
+    id: toDos.length + 1
+  };
+  toDos.push(todo_object);
+}
+// 받은 object로 li행을 만들어 기존ul에 추가
+function make_list(element){
   const toDo = document.createElement("li");
   toDo.className = "toDo";
-  toDo.id = todos.length + 1;
+  toDo.id = element.id;
+
   const deleteBtn = document.createElement("i");
   deleteBtn.className = "icon-trash";
   deleteBtn.addEventListener("click", handleDelete);
   const _p = document.createElement("p");
-  _p.innerHTML = text;
+  _p.innerHTML = element.text;
   toDo.appendChild(_p);
   toDo.appendChild(deleteBtn);
   _todo_list.appendChild(toDo);
-  add_todo();
-  save_todo(todos);
 }
+// li 내부에 있는 deleteBtn 클릭시 실행
 function handleDelete(event) {
   const target = event.target;
   const li = target.parentElement;
   const ul = li.parentElement;
-  const toDoId = li.id;
   ul.removeChild(li);
-  todos = todos.filter(function(toDo) {
-    return toDo.id !== parseInt(toDoId);
+  toDos = toDos.filter(function(element) {
+    return element.id !== parseInt(li.id);
   });
+  save_toDos();
 }
-function load_todo(){
-  if (todos !== null || undefined){
-    console.log(todos);
-    console.log(todos.length);
-    todos.forEach(function(toDo){
-      make_list(toDo.text);
-    });
-  };
-}
-// todos리스트에 객체 추가
-function  add_todo(text){
-  const todo_object =  {
-    text: text,
-    id: todos.length + 1
-  };
-  todos.push(todo_object);
-}
-// 로컬스토리지에 저장
-function save_todo(text) {
-  localStorage.setItem(_todoLS, JSON.stringify(text));
+// toDos 배열을 로컬스토리지에 저장
+function save_toDos() {
+  localStorage.setItem(_toDoLS, JSON.stringify(toDos));
 }
 
+// submit시 실행 함수
 function submit_todo(event){
   event.preventDefault();
-  const _inputTodo = _input_todo.value;
-  add_todo(_inputTodo);
-  save_todo(todos);
-  load_todo();
+  if (_input_todo.value){
+    const _inputTodo = _input_todo.value;
+    add_todo(_inputTodo);
+    save_toDos();
+    make_list(toDos[toDos.length-1]);
+    _input_todo.value = "";
+  }
 }
 
 

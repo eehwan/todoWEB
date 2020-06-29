@@ -16,15 +16,26 @@ navi.off{
 /* 버튼 */
 .checklists{
   position: fixed;
-  border: 2px solid rgb(120, 120, 120);
+  border: 2px solid rgba(240, 240, 240, 0.9);
   border-radius: 0.3em;
   top: 2.5em;
   right: 1em;
-  width: 7.8em;
+  width: 7.5em;
   height: 9em;
   padding: 0.5em;
-  background-color: rgba(161, 161, 161, 0.9);
-  font-size: 0.8em;
+  font-size: 1.05rem;
+  background-color: rgba(240, 240, 240, 0.9);
+}
+.checklists>p{
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  font-weight: bolder;
+}
+.checklists li{
+  cursor: pointer;
+  color: rgb(100, 100, 100)
 }
 .icon-cog-1{
   position: fixed;
@@ -46,6 +57,7 @@ navi.off{
 }
 .icon-trash{
   position: absolute;
+  font-size: 0.85em;
   right: 0.5em;
 }
 
@@ -140,11 +152,11 @@ main{
 
 .center{
   position: fixed;
-  width: 25rem;
+  font-size: 1.3rem;
+  width: 22em;
   top: calc(35vh);
   left: calc(50vw);
   transform: translate(-50%, -25%);
-  border-radius: 1rem;
   z-index: 10;
 }
 .clock{
@@ -153,14 +165,14 @@ main{
   left: 50%;
   transform: translateX(-50%);
   color: rgba(255, 255, 255, 0.9);
-  font-size:  4.5rem;
+  font-size:  5em;
   font-weight: bold;
   text-align: center;
 }
 .context{
   position: relative;
-  margin: 1rem;
-  font-size: 1.5rem;
+  margin:1.5em 1em;
+  font-size: 1.5em;
   font-weight: 1000;
   color: rgba(200, 220, 220, 0.9);
   /* color: rgb(38, 76, 175); */
@@ -177,10 +189,14 @@ main{
   width: 80%;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 0.8em;
+  padding-left: 0.5em;
   border: none;
   border-radius: 0.2em;
   margin-left: 0.5em;
   color: inherit;
+}
+#form_todo input[type=text]::placeholder{
+  color: rgba(0, 0, 0, 0.55);
 }
 #form_todo input[type=submit]{
   position: absolute;
@@ -192,15 +208,16 @@ main{
   border-radius:0.25em;
 }
 
-.context ul{
+#todo_list{
   margin-top: 0.5em;
   scroll-behavior: smooth;
 }
-.context ul li{
+#todo_list li{
   vertical-align: middle;
   width: 80%;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 0.8em;
+  padding-left: 0.2em;
   border: none;
   border-radius: 0.2em;
   margin-left: 0.5em;

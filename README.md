@@ -8,8 +8,13 @@ todoWEB(feat-Momentum) written in JavaScript
 	3. favicon
 	4. QR code(github.io link url)
 
+
 ### edit 20/06/28
-todo.js파일에서 JSON을 활용하여 localStorage에서 object를 저장하거나
-가져와서 object의 key값으로 목록 작성하게 수정하였다.
-하지만 처음 웹페이지를 로드시킬때 localStorage에 이상한 값들이 자꾸 들어간다...
- 
+
+기존에 발생했던 문제는 두가지 원인이 문제였다.
+	1. 함수 호출 과정에서 li태그 생성 함수가 반복적으로 들어가 있었다.
+	2. 기존 li태그들 초기화 없이 처음부터 li태그들이 중복적으로 작성되었다.
+
+두가지 문제점을 해결하고 삭제버튼에 기능을 추가하였다.
+
+이 다음에는 위치기반서비스를 추가할 예정이다.

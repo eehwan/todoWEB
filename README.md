@@ -18,3 +18,4 @@ todoWEB(feat-Momentum) written in JavaScript
 두가지 문제점을 해결하고 삭제버튼에 기능을 추가하였다.
 
 이 다음에는 위치기반서비스를 추가할 예정이다.
++ localStorage에 아무값도 없을시 발생하는 문제 수정!

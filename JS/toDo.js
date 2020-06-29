@@ -5,14 +5,15 @@ function select(tag){
 const _form_todo = select("#form_todo"),
       _input_todo = select("#form_todo input"),
       _todo_list = select("#todo_list");
-
 const _toDoLS = "todo";
-let toDos = JSON.parse(localStorage.getItem(_toDoLS));
-
+let toDos = [];
+if (localStorage.getItem(_toDoLS) != null){
+  toDos = JSON.parse(localStorage.getItem(_toDoLS));
+}
 
 // toDos배열 내부의 object들의 text를 불러와서 make_list함수실행
 function load_todo(){
-  if (toDos !== null || undefined){
+  if (toDos != null ){
     toDos.forEach(function(element){
       make_list(element);
     });
@@ -62,8 +63,7 @@ function save_toDos() {
 function submit_todo(event){
   event.preventDefault();
   if (_input_todo.value){
-    const _inputTodo = _input_todo.value;
-    add_todo(_inputTodo);
+    add_todo(_input_todo.value);
     save_toDos();
     make_list(toDos[toDos.length-1]);
     _input_todo.value = "";

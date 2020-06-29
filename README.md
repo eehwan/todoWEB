@@ -12,6 +12,7 @@ todoWEB(feat-Momentum) written in JavaScript
 ### edit 20/06/28
 
 기존에 발생했던 문제는 두가지 원인이 문제였다.
+
 	1. 함수 호출 과정에서 li태그 생성 함수가 반복적으로 들어가 있었다.
 	2. 기존 li태그들 초기화 없이 처음부터 li태그들이 중복적으로 작성되었다.
 

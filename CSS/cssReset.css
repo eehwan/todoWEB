@@ -12,9 +12,11 @@ iframe{overflow:hidden;margin:0;padding:0;border:0}
 input,p{display: inline-block;}
 input:focus{border:none;}
 
-
-html{
-  -webkit-text-size-adjust:none;
+html {
+  -webkit-text-size-adjust: none; /*Chrome, Safari, newer versions of Opera*/
+  -moz-text-size-adjust: none; /*Firefox*/
+  -ms-text-size-adjust: none;  /*Ie*/
+  -o-text-size-adjust: none; /*old versions of Opera*/
 }
 *{
   box-sizing: border-box !important;
@@ -25,9 +27,6 @@ html{
   scrollbar-width: none;
 }
 /* Chrome, Safari, Opera*/
-.wrapper::-webkit-scrollbar {
-  display: none;
-}
 ::-webkit-scrollbar {
   display: none;
 }

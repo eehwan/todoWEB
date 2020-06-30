@@ -5,10 +5,11 @@ function select(tag){
 const _form_todo = select("#form_todo"),
       _input_todo = select("#form_todo input"),
       _todo_list = select("#todo_list");
-const _toDoLS = "todo";
+
+const LS_todo = "todo";
 let toDos = [];
-if (localStorage.getItem(_toDoLS) != null){
-  toDos = JSON.parse(localStorage.getItem(_toDoLS));
+if (localStorage.getItem(LS_todo) != null){
+  toDos = JSON.parse(localStorage.getItem(LS_todo));
 }
 
 // toDos배열 내부의 object들의 text를 불러와서 make_list함수실행
@@ -56,7 +57,7 @@ function handleDelete(event) {
 }
 // toDos 배열을 로컬스토리지에 저장
 function save_toDos() {
-  localStorage.setItem(_toDoLS, JSON.stringify(toDos));
+  localStorage.setItem(LS_todo, JSON.stringify(toDos));
 }
 
 // submit시 실행 함수

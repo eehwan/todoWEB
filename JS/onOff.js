@@ -1,7 +1,7 @@
 function select(tag){
   return document.querySelector(tag);
 }
-
+const _wrapper = select(".wrapper");
 const _context = select(".context");
 const _show_todo = select("#show_todo");
 const _todo_add = select("#todo_add");
@@ -14,32 +14,69 @@ const _navi = select("navi")
 function hide(selected){
   selected.classList.toggle("hide");
 }
-function onOff(selected){
-  selected.classList.toggle("off")
+function off(selected){
+  selected.classList.add("off");
+}
+function on(selected){
+  selected.classList.remove("off");
+}
+function goUp(selected){
+  selected.classList.add("goUp");
+}
+function goDown(selected){
+  selected.classList.remove("goUp");
 }
 
-function click_hide(a,b){
+// click events
+function switch_hide(a,b){
   a.addEventListener('click', function(){
     hide(b);
   });
 }
-function vision(a,b){
+// hover Events
+function make_visible(a,b){
   a.addEventListener('mouseover', function(){
-    onOff(b);
+    on(b);
   });
-  a.addEventListener("mouseout", function(){
-    onOff(b);
+}
+function make_invisible(a,b){
+  a.addEventListener('mouseout', function(){
+    off(b);
+  });
+}
+
+let last_known_scroll_position = 0;
+let ticking = false;
+function react_scroll(target){
+  console.log("scroll?")
+  _wrapper.addEventListener('scroll', function(e) {
+    current_scroll_position = window.scrollY;
+    if (current_scroll_position != last_known_scroll_position) {
+      window.requestAnimationFrame(function() {
+        goDown(target);
+        console.log("moved")
+      });
+      last_known_scroll_position = current_scroll_position;
+      goUp(target);
+    }
   });
 }
 
 
 
 function init() {
-  click_hide(_show_todo, _context);
-  click_hide(_todo_add, _form);
-  click_hide(_settings,_checklists);
-  vision(_header, _header)
-  vision(_navi, _navi)
+  switch_hide(_show_todo, _context);
+  switch_hide(_todo_add, _form);
+  switch_hide(_settings,_checklists);
+  // react_scroll(_header);
+  make_invisible(_header, _header);
+  make_visible(_header, _header);
+  make_invisible(_navi, _navi);
+  make_visible(_navi, _navi);
+
+  setTimeout(function(){
+    off(_header);
+  }, 3000);
 }
 
 init();

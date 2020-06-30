@@ -24,7 +24,7 @@ function load_todo(){
 // toDos배열에 text를 객체로 추가
 function  add_todo(text){
   const todo_object =  {
-    text: text,
+    text,
     id: toDos.length + 1
   };
   toDos.push(todo_object);

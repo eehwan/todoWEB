@@ -6,8 +6,8 @@ const _context = select(".context");
 const _show_todo = select("#show_todo");
 const _todo_add = select("#todo_add");
 const _form = select(".context>form");
-const _settings = select(".icon-cog-1");
-const _checklists = select(".checklists")
+const __sett_icon = select(".icon-cog-1");
+const _settings = select(".settings")
 const _header = select("header");
 const _navi = select("navi")
 
@@ -67,7 +67,7 @@ function react_scroll(target){
 function init() {
   switch_hide(_show_todo, _context);
   switch_hide(_todo_add, _form);
-  switch_hide(_settings,_checklists);
+  switch_hide(__sett_icon,_settings);
   // react_scroll(_header);
   make_invisible(_header, _header);
   make_visible(_header, _header);

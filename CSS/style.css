@@ -5,7 +5,7 @@
 }
 .off{
   opacity: 0;
-  transition: opacity 2s 0.3s;
+  transition: opacity 1.5s 0.5s;
 }
 navi.off{
   opacity: 0.15;
@@ -14,32 +14,42 @@ navi.off{
   transform: translateY(-100%);
   transition: transform 1.5s 2s;
 }
-
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.65;
+  }
+}
 
 
 /* 버튼 */
-.checklists{
+.settings{
   position: fixed;
   border: 2px solid rgba(240, 240, 240, 0.9);
   border-radius: 0.3em;
   top: 2.5em;
   right: 1em;
-  width: 7.5em;
-  height: 9em;
-  padding: 0.5em;
+  width: 8em;
+  height: 7.5em;
+  padding: 0.3em;
   font-size: 1.05rem;
-  background-color: rgba(240, 240, 240, 0.9);
+  background-color: rgba(240, 240, 240, 0.95);
 }
-.checklists>p{
+.settings>p{
   margin-left: 0.5em;
   margin-bottom: 0.5em;
   color: rgb(0, 0, 0);
   font-size: 1em;
   font-weight: bolder;
 }
-.checklists li{
+.settings li{
   cursor: pointer;
-  color: rgb(100, 100, 100)
+  color: rgb(100, 100, 100);
+  font-size: 0.9em;
+  padding: 0.15em;
+
 }
 .icon-cog-1{
   position: fixed;
@@ -65,6 +75,7 @@ navi.off{
   right: 0.5em;
 }
 
+
 /* wrapper */
 
 .wrapper{
@@ -86,8 +97,8 @@ header{
   border-radius: 10px;
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
-  z-index: 5;
   background-color: rgba(56, 109, 245, 0.9);
+  z-index: 5;
 }
 #greeting{
   display: inline-block;
@@ -150,7 +161,25 @@ navi{
 main{
   scroll-behavior: smooth;
 }
-
+#place{
+  position:fixed;
+  color: rgb(255, 255, 255);
+  max-width: 10em;
+  font-size: 1.5rem;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+#weather{
+  position:fixed;
+  color: rgb(255, 255, 255);
+  max-width: 8em;
+  text-align: left;
+  font-size: 1rem;
+  top: 3rem;
+  right: 1rem;
+  z-index: 2;
+}
 
 /* center */
 
@@ -227,21 +256,12 @@ main{
   margin-bottom: 0.2em;
 }
 
-/* page */
-.pages{
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-}
+/* background */
 .background{
   display: block;
   width: 100vw;
   height: 100vh;
+  opacity: 0.65;
 
   scroll-snap-align: center;
   scroll-snap-stop: always;
@@ -249,7 +269,17 @@ main{
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  animation: fadeIn 1.5s linear;
 }
+.dimmed{
+  background-color: rgba(0, 0, 0);
+  position:fixed;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
 /* pages */
 #page1{
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1)),

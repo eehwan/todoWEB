@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <META HTTP-EQUIV="refresh" CONTENT="300">
     <title>Todo List (by eehwan)</title>
 
     <link href="CSS/cssReset.css" rel="stylesheet" type="text/css" />
@@ -27,13 +28,22 @@
         <abbr title="settings">
           <i class="icon-cog-1 animate-spin"></i>
         </abbr>
-        <ul class="checklists hide">
+        <ul class="settings hide">
           <p>Settings</p>
           <li id="show_todo"> To do - List </li>
+          <li id="clear_all"> Clear All </li>
+          <li id="clear_name"> Clear Name </li>
+          <li id="clear_todos"> Clear toDo list </li>
         </ul>
       </header>
       <navi class="off"> navi </navi>
       <main>
+        <span id="place">
+          loading place...
+        </span>
+        <span id="weather">
+          loading weather...
+        </span>
         <div class="center">
           <div class="clock">
             clock
@@ -51,6 +61,7 @@
         <div class="pages" id="page2"></div>
         <div class="pages" id="page3"></div> -->
       </main>
+      <div class="dimmed"></div>
       <footer>
         <a href="QR_code.png" id='QR_code' onclick="window.open(this.href, '_blank', 'width=250px,height=250px,toolbars=no,scrollbars=no'); return false;">
           <img src='QR_code.png' id='QR_code'>
@@ -63,6 +74,8 @@
       <script src="JS/onOff.js"></script>
       <script src="JS/toDo.js"></script>
       <script src="JS/background.js"></script>
+      <script src="JS/weather.js"></script>
+      <script src="JS/clear.js"></script>
     </div>
   </body>
 

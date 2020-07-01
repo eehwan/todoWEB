@@ -3,11 +3,13 @@ function select(tag){
 }
 // already been declared in other JS
 // const _wrapper = select(".wrapper");
+const _background = select(".background"),
+      _change_img = select("#change_img");
 
 const _page1 = select("#page1"),
       _page2 = select("#page2"),
       _page3 = select("#page3");
-const num_of_imgs = 7;
+const num_of_imgs = 8;
 
 let nums = [];
 
@@ -22,19 +24,19 @@ function gen_num(num_of_imgs){
   }
 }
 function paint(target, imgNum){
-  const bg = document.createElement("div");
-  bg.classList.add('background');
-  bg.style.backgroundImage = `url(img/desktop/${imgNum}.jpg)`;
-  target.prepend(bg);
-  // const image = new Image();
-  // image.src = `img/desktop/${imgNum}.jpg`;
-  // image.classList.add('background');
-  // target.insertBefore(image, target.firstChild);
-  nums.push(imgNum);
+  // const bg = document.createElement("div");
+  // bg.classList.add('background');
+  // bg.style.backgroundImage = `url(img/desktop/${imgNum}.jpg)`;
+  // target.prepend(bg);
+  _background.style.backgroundImage = `url(img/desktop/${imgNum}.jpg)`;
+  // nums.push(imgNum);
 }
+
 function init(){
   paint(_wrapper, gen_num(num_of_imgs));
-  paint(_wrapper, gen_num(4));
+  _change_img.addEventListener('click', function(){
+    paint(_wrapper, gen_num(num_of_imgs));
+  })
 }
 
 init();

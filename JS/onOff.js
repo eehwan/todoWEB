@@ -66,7 +66,7 @@ function react_scroll(target){
 
 function init() {
   switch_hide(_show_todo, _context);
-  switch_hide(_todo_add, _form);
+  // switch_hide(_todo_add, _form);
   switch_hide(__sett_icon,_settings);
   // react_scroll(_header);
   make_invisible(_header, _header);

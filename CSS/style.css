@@ -170,7 +170,8 @@ main{
 #place{
   position:fixed;
   color: rgb(255, 255, 255);
-  max-width: 10em;
+  min-width: 8em;
+  text-align: center;
   font-size: 1.5rem;
   top: 1rem;
   right: 1rem;
@@ -179,8 +180,8 @@ main{
 #weather{
   position:fixed;
   color: rgb(255, 255, 255);
-  max-width: 8em;
-  text-align: left;
+  max-width: 8.5em;
+  text-align: right;
   font-size: 1rem;
   top: 3rem;
   right: 1rem;

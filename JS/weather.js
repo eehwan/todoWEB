@@ -38,7 +38,7 @@ function get_weather(lat, long){
   }).then(function(json){
     // console.log(json);
     _place.innerHTML = `${json.name}`;
-    _weather.innerHTML = `Cloud : ${json.clouds.all}&nbsp;&nbsp;<br>TEMP : ${json.main.temp.toFixed(1)}&deg;C<br>feels like : ${json.main.feels_like.toFixed(1)}&deg;C`;
+    _weather.innerHTML = `Cloud :&nbsp;${json.clouds.all} &nbsp;&nbsp;&nbsp;<br>TEMP : ${json.main.temp.toFixed(1)} &deg;C<br>feels like : ${json.main.feels_like.toFixed(1)} &deg;C`;
   });
 }
 

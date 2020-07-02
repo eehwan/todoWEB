@@ -170,7 +170,7 @@ main{
 #place{
   position:fixed;
   color: rgb(255, 255, 255);
-  min-width: 8em;
+  min-width: 6em;
   text-align: center;
   font-size: 1.5rem;
   top: 1rem;
@@ -180,7 +180,7 @@ main{
 #weather{
   position:fixed;
   color: rgb(255, 255, 255);
-  max-width: 8.5em;
+  /* max-width: 8.5em; */
   text-align: right;
   font-size: 1rem;
   top: 3rem;
@@ -222,7 +222,7 @@ main{
 #form_todo input[type=text]{
   vertical-align: middle;
   width: 80%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
   font-size: 0.8em;
   padding-left: 0.5em;
   border: none;
@@ -254,7 +254,7 @@ main{
   vertical-align: middle;
   width: 80%;
   overflow-x: scroll;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   font-size: 0.8em;
   padding-left: 0.2em;
   border: none;

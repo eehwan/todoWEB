@@ -10,6 +10,6 @@ todoWEB(feat-Momentum) written in JavaScript
 	5. QR code(github.io link url)
 
 
-### edit 20/7/01
+### edit 20/7/02
 
 수정 수정

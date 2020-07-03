@@ -9,7 +9,6 @@ const _form = select(".context>form");
 const __sett_icon = select(".icon-cog-1");
 const _settings = select(".settings")
 const _header = select("header");
-const _navi = select("navi")
 
 function hide(selected){
   selected.classList.toggle("hide");
@@ -45,22 +44,22 @@ function make_invisible(a,b){
   });
 }
 
-let last_known_scroll_position = 0;
-let ticking = false;
-function react_scroll(target){
-  console.log("scroll?")
-  _wrapper.addEventListener('scroll', function(e) {
-    current_scroll_position = window.scrollY;
-    if (current_scroll_position != last_known_scroll_position) {
-      window.requestAnimationFrame(function() {
-        goDown(target);
-        console.log("moved")
-      });
-      last_known_scroll_position = current_scroll_position;
-      goUp(target);
-    }
-  });
-}
+// let last_known_scroll_position = 0;
+// let ticking = false;
+// function react_scroll(target){
+//   console.log("scroll?")
+//   _wrapper.addEventListener('scroll', function(e) {
+//     current_scroll_position = window.scrollY;
+//     if (current_scroll_position != last_known_scroll_position) {
+//       window.requestAnimationFrame(function() {
+//         goDown(target);
+//         console.log("moved")
+//       });
+//       last_known_scroll_position = current_scroll_position;
+//       goUp(target);
+//     }
+//   });
+// }
 
 
 
@@ -71,8 +70,6 @@ function init() {
   // react_scroll(_header);
   make_invisible(_header, _header);
   make_visible(_header, _header);
-  make_invisible(_navi, _navi);
-  make_visible(_navi, _navi);
 
   setTimeout(function(){
     off(_header);

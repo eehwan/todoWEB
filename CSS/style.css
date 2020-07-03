@@ -19,7 +19,7 @@ navi.off{
     opacity: 1;
   }
   to {
-    opacity: 0.65;
+    opacity: 0.60;
   }
 }
 
@@ -27,14 +27,13 @@ navi.off{
 /* 버튼 */
 .settings{
   position: fixed;
-  border: 2px solid rgba(240, 240, 240, 0.9);
   border-radius: 0.3em;
   top: 2em;
   right: 1em;
   width: 6.5em;
   padding: 0.1em;
   font-size: 1em;
-  background-color: rgba(240, 240, 240, 0.95);
+  background-color: rgba(208, 217, 217, 0.95);
 }
 .settings>p{
   margin-left: 0.5em;
@@ -43,18 +42,22 @@ navi.off{
   font-size: 1em;
   font-weight: bolder;
 }
-.settings li{
+.settings button{
   cursor: pointer;
   color: rgb(100, 100, 100);
-  font-size: 0.9em;
-  padding: 0.15em;
+  font-size: 0.8em;
+  padding: 0.1em;
+  margin: 0.1em;
 
+  background-color: rgb(246, 249, 252);
+  border: rgba(255, 255, 255, 0.2);
+  border-radius: 0.2rem;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 .icon-cog-1{
   position: fixed;
   top: 0.3em;
   right: 0.3em;
-  display: inline-block;
   font-size: 1.25em;
   vertical-align: middle;
   cursor: pointer;
@@ -62,10 +65,10 @@ navi.off{
 .icon-list-add,button[type=submit]{
   background: none;
   border: none;
-  color:inherit;
+  color:rgba(200, 220, 220, 0.6) !important;
 
   position: absolute;
-  right: 0em;
+  right: 0.45em;
   font-size: 1.2em;
   border-radius: 5px;
   cursor: pointer;
@@ -73,9 +76,16 @@ navi.off{
 .icon-trash{
   position: absolute;
   font-size: 0.85em;
-  right: 0.5em;
+  right: 0em;
+  color:rgba(200, 220, 220, 0.6) !important;
 }
-
+.icon-check, .icon-check-empty{
+  position: absolute;
+  font-size: 0.8em;
+  top: 0.15em;
+  right: 1.4em;
+  color:rgba(180, 220, 220, 0.5) !important;
+}
 
 /* wrapper */
 
@@ -97,9 +107,9 @@ header{
   width: 100vw;
   border-radius: 5px;
   color: rgb(235, 235, 235, 0.9);
-  font-size: 1.8em;
+  font-size: 1.6em;
   background-color: rgba(120, 120, 120, 0.95);
-  z-index: 5;
+  z-index: 10;
 }
 #greeting{
   display: inline-block;
@@ -134,7 +144,6 @@ footer{
 }
 #QR_code{
   max-height: 10vh;
-  z-index: 99;
 }
 #GitHub_Link{
   position: absolute;
@@ -145,21 +154,6 @@ footer{
   transform: translate(-50%, -50%);
   color: rgba(0, 0, 0, 0.85);
   cursor: pointer;
-}
-
-navi{
-  display: none;
-
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: rgb(255,255,255);
-  width: 7px;
-  height: 40%;
-  border-radius: 5px;
-  right: 5vw;
-  top:50%;
-  transform: translateY(-50%);
-  z-index: 3;
 }
 
 
@@ -197,7 +191,7 @@ main{
   top: calc(40vh);
   left: calc(50vw);
   transform: translate(-50%, -20%);
-  z-index: 10;
+  z-index: 5;
 }
 .clock{
   display: inline-block;
@@ -221,8 +215,8 @@ main{
 }
 #form_todo input[type=text]{
   vertical-align: middle;
-  width: 80%;
-  background-color: rgba(255, 255, 255, 0.15);
+  width: 75%;
+  background-color: rgba(255, 255, 255, 0.1);
   font-size: 0.8em;
   padding-left: 0.5em;
   border: none;
@@ -251,16 +245,22 @@ main{
   scroll-behavior: smooth;
 }
 #todo_list li{
-  vertical-align: middle;
-  width: 80%;
+  position: relative;
+}
+#todo_list li p{
+  width: 75%;
   overflow-x: scroll;
-  background-color: rgba(255, 255, 255, 0.1);
   font-size: 0.8em;
   padding-left: 0.2em;
+  color: rgba(220, 235, 235, 0.85);
+  vertical-align: middle;
+  text-decoration: inherit;
+
+  background-color: rgba(255, 255, 255, 0.085);
   border: none;
   border-radius: 0.2em;
   margin-left: 0.5em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.3em;
 }
 
 /* background */
@@ -304,6 +304,6 @@ main{
 /* 모바일 */
 @media(max-device-aspect-ratio:9/16){
   html{
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 }

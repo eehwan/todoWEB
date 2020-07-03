@@ -35,14 +35,33 @@ function make_list(element){
   toDo.className = "toDo";
   toDo.id = element.id;
 
+  const checkBox = document.createElement("i");
+  checkBox.className = "icon-check-empty";
+  checkBox.addEventListener("click", handleCheck);
   const deleteBtn = document.createElement("i");
   deleteBtn.className = "icon-trash";
   deleteBtn.addEventListener("click", handleDelete);
+
   const _p = document.createElement("p");
   _p.innerHTML = element.text;
   toDo.appendChild(_p);
+  toDo.appendChild(checkBox);
   toDo.appendChild(deleteBtn);
   _todo_list.appendChild(toDo);
+}
+// li 내부에 있는 checkBox 클릭시 실행
+function handleCheck(){
+  const target = event.target;
+  if (target.className=="icon-check-empty"){
+    target.className= "icon-check";
+    const li = target.parentElement;
+    li.style.textDecoration = "line-through";
+    li.style.textDecorationColor = "rgb(230, 130, 30)";
+  }else{
+    target.className= "icon-check-empty";
+    const li = target.parentElement;
+    li.style.textDecoration = "none";
+  }
 }
 // li 내부에 있는 deleteBtn 클릭시 실행
 function handleDelete(event) {

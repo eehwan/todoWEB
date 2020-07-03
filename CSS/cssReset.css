@@ -1,17 +1,58 @@
 @charset "UTF-8";
-body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul{margin:0;padding:0}
-body,button,input,select,table,textarea{font-size:12px;font-family:"Apple SD Gothic Neo",Dotum,'돋움',Helvetica,sans-serif}
-button,input{border-radius:0}
-fieldset,img{border:0}
-ol,ul{list-style:none}
-address,em{font-style:normal}
-a{text-decoration:none}
-a:hover{text-decoration:underline;}
-iframe{overflow:hidden;margin:0;padding:0;border:0}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom */
 input,p{display: inline-block;}
 input:focus{border:none;}
-li:hover{ font-weight: bolder;}
+button{all:unset;}
+button:active{transform: scale(0.99);}
 
 html {
   -webkit-text-size-adjust: none; /*Chrome, Safari, newer versions of Opera*/

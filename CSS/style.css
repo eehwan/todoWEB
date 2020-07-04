@@ -78,13 +78,15 @@ navi.off{
   font-size: 0.85em;
   right: 0em;
   color:rgba(200, 220, 220, 0.6) !important;
+  cursor: pointer;
 }
 .icon-check, .icon-check-empty{
   position: absolute;
   font-size: 0.8em;
-  top: 0.15em;
+  top: 0.075em;
   right: 1.4em;
-  color:rgba(180, 220, 220, 0.5) !important;
+  color:rgba(200, 220, 220, 0.45) !important;
+  cursor: pointer;
 }
 
 /* wrapper */
@@ -205,7 +207,7 @@ main{
 }
 .context{
   position: relative;
-  margin:2em 0.8em;
+  margin: 2em 0.8em;
   font-size: 1.5em;
   font-weight: 1000;
   color: rgb(200, 220, 220);
@@ -238,7 +240,7 @@ main{
 }
 
 #todo_list{
-  max-height: 55vh;
+  max-height: calc(65vh - 200px);
   margin-top: 0.5em;
   overflow-y: scroll;
   /* overscroll-behavior: contain; */
@@ -249,7 +251,7 @@ main{
 }
 #todo_list li p{
   width: 75%;
-  overflow-x: scroll;
+  overflow: hidden;
   font-size: 0.8em;
   padding-left: 0.2em;
   color: rgba(220, 235, 235, 0.85);

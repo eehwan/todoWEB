@@ -54,13 +54,15 @@ function handleCheck(){
   const target = event.target;
   if (target.className=="icon-check-empty"){
     target.className= "icon-check";
-    const li = target.parentElement;
-    li.style.textDecoration = "line-through";
-    li.style.textDecorationColor = "rgb(230, 130, 30)";
+    const p = target.parentElement.firstChild;
+    p.style.color="rgba(220, 235, 235, 0.55)";
+    p.style.textDecoration = "line-through";
+    p.style.textDecorationColor = "#D12332";
   }else{
     target.className= "icon-check-empty";
-    const li = target.parentElement;
-    li.style.textDecoration = "none";
+    const p = target.parentElement.firstChild;
+    p.style.color = "rgba(220, 235, 235, 0.85)"
+    p.style.textDecoration = "none";
   }
 }
 // li 내부에 있는 deleteBtn 클릭시 실행

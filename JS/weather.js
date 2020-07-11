@@ -2,6 +2,8 @@ function select(tag) {
   return document.querySelector(tag);
 }
 
+const weather_reset_time = 1000*60*15;
+
 const coords = "coords";
 const openWeatherMap_api_Key = "608b9ffa6002fe78ed3a0182ce0b9e75";
 const lang = "uk";
@@ -10,11 +12,11 @@ const _weather = select("#weather"),
   _place = select("#place");
 
 function load_coords() {
-  var loadedCoords = JSON.parse(localStorage.getItem(coords));
-  if (loadedCoords == null) {
-    ask_coords();
-  } else {
+  let loadedCoords = JSON.parse(localStorage.getItem(coords));
+  if (loadedCoords) {
     get_weather(loadedCoords);
+  } else {
+    ask_coords();
   }
 }
 
@@ -46,9 +48,8 @@ function get_weather(loadedCoords) {
   });
 }
 
-
-
-function init() {
+function init(){
   load_coords();
+  setInterval(()=>load_coords(),weather_reset_time);
 }
 init();

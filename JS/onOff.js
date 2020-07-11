@@ -72,7 +72,7 @@ function init() {
 
   setTimeout(function(){
     off(_header);
-  }, 3000);
+  }, 4000);
 }
 
 init();

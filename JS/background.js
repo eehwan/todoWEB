@@ -11,18 +11,8 @@ const _page1 = select("#page1"),
       _page3 = select("#page3");
 const num_of_imgs = 9;
 
-// let nums = [];
-let last_img= 0;
 
-// function gen_num(num_of_imgs){
-//   let imgNum = Math.floor(Math.random() * num_of_imgs) + 1;
-//   while (true){
-//     imgNum = Math.floor(Math.random() * num_of_imgs) + 1;
-//     if (!nums.includes(imgNum)){
-//       return imgNum;
-//     }
-//   }
-// }
+let last_img= 0;
 function confirm_num(num_of_imgs){
   let imgNum = Math.floor(Math.random() * num_of_imgs) + 1;
   while (true){
@@ -34,12 +24,7 @@ function confirm_num(num_of_imgs){
 }
 
 function paint(target, imgNum){
-  // const bg = document.createElement("div");
-  // bg.classList.add('background');
-  // bg.style.backgroundImage = `url(img/desktop/${imgNum}.jpg)`;
-  // target.prepend(bg);
   _background.style.backgroundImage = `url(img/desktop/${imgNum}.jpg)`;
-  // nums.push(imgNum);
 }
 
 function init(){

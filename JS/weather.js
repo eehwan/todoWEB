@@ -13,9 +13,7 @@ function load_coords(){
   const loadedCoords = JSON.parse(localStorage.getItem(coords));
   if (loadedCoords==null){
     ask_coords();
-  }else{
-    get_weather(loadedCoords.latitude, loadedCoords.longitude);
-  }
+  }get_weather(loadedCoords.latitude, loadedCoords.longitude);
 }
 function ask_coords(){
   navigator.geolocation.getCurrentPosition(handle_geoSuccess, handle_geoError)

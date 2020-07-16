@@ -1,6 +1,6 @@
 # Momentum - Clone coding
 
-todoWEB(feat-Momentum) written in JavaScript
+todoWEB(feat-Momentum) written in Vanilla JavaScript
 
 ## features
 	1. realtime clock

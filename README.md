@@ -2,7 +2,7 @@
 
 todoWEB(feat-Momentum) written in Vanilla JavaScript
 
-https://eehwan.githun.io/todoWEB-feat-Momentum-with-JS
+https://eehwan.github.io/todoWEB-feat-Momentum-with-JS
 
 ## features
 	1. realtime clock

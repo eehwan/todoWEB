@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>log-in</title>
+  </head>
+  <body>
+    <script>
+      FB.login(function(response) {
+        if (response.status === 'connected') {
+          // Logged into your webpage and Facebook.
+        } else {
+          // The person is not logged into your webpage or we are unable to tell.
+        }
+      }, {scope: 'public_profile,email'});
+
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  </body>
+</html>

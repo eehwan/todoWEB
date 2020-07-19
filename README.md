@@ -2,6 +2,8 @@
 
 todoWEB(feat-Momentum) written in Vanilla JavaScript
 
+https://eehwan.github.io/todoWEB-feat-Momentum-with-JS
+
 ## features
 	1. realtime clock
 	2. weather (using openweatherMap api)

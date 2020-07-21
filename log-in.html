@@ -11,19 +11,13 @@
     <p>
       Facebook OAuth Test
     </p>
-    <button id='status'>checking</button>
-    <!-- <script>
-      FB.login(function(response) {
-        if (response.status === 'connected') {
-          // Logged into your webpage and Facebook.
-        } else {
-          // The person is not logged into your webpage or we are unable to tell.
-        }
-      }, {
-        scope: 'public_profile,email'
-      });
-    </script> -->
-    <script type="text/javascript" src="JS/OAuth.js"></script>
+    <div class="facebook">
+      <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" id="fb_login"> </fb:login-button>
+      <button onclick='FB.logout()' id="fb_logout">log out</button> -->
+      <button id="fb_button">button</button>
+    </div>
+    <p id='text'>checking...</p>
+    <script src="JS/OAuth.js"></script>
   </body>
 
 </html>

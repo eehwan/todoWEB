@@ -1,5 +1,4 @@
-# Momentum - Clone coding
-
+# This project imitates 'Momentum'
 todoWEB(feat-Momentum) written in Vanilla JavaScript
 
 https://eehwan.github.io/todoWEB-feat-Momentum-with-JS

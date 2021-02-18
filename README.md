@@ -1,4 +1,4 @@
-# Cloning "Momentum" written in Vanilla-Javascript
+# todoWEB
 
 https://eehwan.github.io/todoWEB/
 
